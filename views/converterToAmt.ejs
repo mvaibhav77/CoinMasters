@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6F961KV16F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6F961KV16F');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6503317165657788"
+     crossorigin="anonymous"></script>    
+	
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="We give you the best and accurate <%=amount %> <%= from.toUpperCase() %> to <%= to.toUpperCase() %> Conversion. Get latest information and news of Top Cryptocurrency in India. CoinMasters is a free, fast and accurate Cryptocurrency Converter and News Blog website. We are using trusted sources for our conversion rates and trying to give you the Fastest and Smoothest experience while using over tools.">
+
+    <link rel="icon" href="../assets/icon.ico">
+    <link rel="shortcut icon" href="../assets/icon.ico">
+
+
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'> 
+    <link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+    
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title><%= amount %> <%= from.toUpperCase() %> to <%= to.toUpperCase() %> Converter and Calculator | CoinMasters</title>
+  </head>
+  <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTQQ9FW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <div class="from" id="<%= from %>">
+      <!-- <%= from %> -->
+    </div>
+    <div class="to" id="<%= to %>">
+        <!-- <%= to %> -->
+      </div>
+      <div class="amount" id="<%= amount %>">
+        <!-- <%= to %> -->
+      </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar bg-transparent navbar-expand-lg navbar-dark">
+      <!-- MAIN MENU -->
+      <div class="main-menu py-lg-4 py-3 container-fluid">
+        <a class="navbar-brand" href="/"><h1 class="pt-2 brand">Coin Masters</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav pl-2">
+            <li class="nav-item px-2">
+              <a class="nav-link active" href="/">CONVERTER
+              </a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="/crypto">CRYPTOCURRENIES</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="/blog">BLOG
+              </a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="/news">NEWS</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="/about">ABOUT US</a>
+            </li>
+            <li class="nav-item dropdown px-2">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MORE</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/contact">CONTACT</a>
+                <a class="dropdown-item" href="https://coinmarketcap.com/">More About Crypto</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- MENU END -->
+    </nav>
+
+    <!-- MainBody -->
+    <div class="container bg-transparent row p-0 mx-auto mb-3" id="main-content">
+      <div class="main-row col-12 col-lg-8 mx-auto mb-3">
+
+        <div class="mt-3 px-0 text-light rounded dark-converter" id="converter">
+            <form class="border border-secondary p-4 px-md-5 rounded">
+                <fieldset>
+                    <h3 class = "mb-4 headers text-light" style="font-weight: 600;" id="converter-head">Cryptocurrency Converter and Calculator</h3>
+                    <div class="form-group row">
+                        <div class="col-12 col-md-3 p-1">
+                            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Enter number of Currency" value=<%= amount %>>
+                        </div>
+                        <div class="col-12 col-md-4 p-1">
+                            <select class="form-select" id="fromSelect">
+                                <!-- options -->
+                                <option id="BTC"><span class="symb">BTC</span></option>
+
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-1 text-center p-0 justify-content-between">
+                            <button type="button" class="btn btn-default fs-5" id="swap">
+                                <i class="fa fa-arrow-right-arrow-left"></i>
+                              </button>
+                        </div>
+                        <div class="col-12 col-md-4 p-1">
+                            <select class="form-select" id="toSelect">
+                               <!-- options -->
+                               <option id="USD"><span class="symb">USD - United State Dollars</span></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between mt-3">
+                        <div class="col-12 col-md-5 mt-3">
+                            <span id="convertionRate">
+                                <!-- BTC/USD Rate : 23386.481408 -->
+                            </span>
+                        </div>
+                        <button class="btn col-12 col-md-5 fs-5 mt-3 px-4" id="convertCurr">
+                            <i class="fa fa-arrows-rotate"></i>
+                            Convert
+                          </button>
+                    </div>
+                </fieldset>
+            </form>
+            
+        </div>
+        
+        <!-- result -->
+        <div class="card col-12 text-white dark-result" id="result">
+          <!-- Result body -->
+          <div class="card-body">
+            <h4 class="card-title text-center">Converted Price will show here</h4>
+          </div>
+        </div>
+
+        <!-- info-card -->
+        <div class="card text-light border-danger bg-transparent info-glassmorphism mt-4" id="info-converter">
+          <div class="card-body ">
+            <h3 class="card-title">Bitcoin Exchange Rate Calculator </h3>
+            <p class="card-text">Loading...</p>
+          </div>
+        </div>
+
+        <table class="table table-bordered bg-transparent white-glassmorphism mt-3 border"id="coinQuote" style="font-size:1.1em">
+            <!-- Table content -->
+        </table>
+
+        <div class="row mt-3 p-2 rounded" id="YTSearch">
+            <!-- YT search -->
+        </div>
+
+      </div>
+
+      <!-- side-content -->
+      <div class="col-12 col-lg-4" id="side-content">
+        <div class="card bg-transparent white-glassmorphism text-light my-4 my-sm-3 px-0 top-converion-container">
+          <div class="card-header"><h4>Top Convertions</h4></div>
+          <div class="card-body p-0">
+            <div class="list-group border-top-0" id="topConversion">
+              <!-- <a href="#" style="text-decoration:none;">
+                <li class="list-group-item list-group-item-action d-flex fs-5 justify-content-between align-items-center">
+                  Bitcoin to USD
+                  <em class="badge">22217.194241811</em>
+                </li>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-transparent">
+      <div class="card">
+          <span class="text-center text-light font-big mt-1"id="footer-header">
+            Copyright &#169;CoinMasters. All rights Reserved.
+          </span>
+          <ul class="nav footer-nav nav-pills mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/privacy">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://coinmarketcap.com/">More About Crypto</a>
+            </li>
+          </ul>
+      </div>
+    </footer>
+    
+<!-- Additional Css -->
+  <style>
+    body{
+      /* background-color: #343434; */
+      font-family: 'Open Sans' !important;
+      padding: 0;
+      margin:0;
+      background-color: #0f0e13;
+      background-image: radial-gradient(at 0% 0%,hsla(253,16%,7%,1) 0,transparent 50%),radial-gradient(at 50% 0%,hsla(339,49%,30%,1) 0,transparent 50%),radial-gradient(at 100% 0%,hsla(193.3,100%,11%,1) 0,transparent 50%);
+      /* font-size:1.14em; */
+    }
+
+    /* Navbar */
+    .navbar{
+      margin: 0;
+      padding: 0 !important;
+    }
+
+    .main-menu{
+        padding-left: 8em !important;
+        position:fixed;
+        top:0;
+        z-index:5;
+    }
+
+    .navbar-expand-lg{
+        display: block !important;
+    }
+    .navbar-toggler, .navbar-toggler-icon{
+        color:white;
+    }
+
+    .nav-item{
+        font-size: 0.9em;
+        color:white !important;
+    }
+
+    .brand{
+        font-family: 'Cinzel Decorative';
+        font-size: 1.2em;
+        color:white !important;
+    }
+
+    .font-big{
+      font-size:1.1em;
+    }
+
+    /* Main-content */
+    #main-content{
+      margin-top:7%;
+      max-width: 90%;
+    }
+
+
+    .dark-converter{
+        background: rgb(39,51,89,.4) !important;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px #0003;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(0,0,0,.3);
+    }
+
+    .bg-transparent {
+        background-color: transparent !important;
+    }
+
+    .white-glassmorphism {
+        background: hsla(339,49%,30%,.1) !important;
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255,255,255,.3) !important;
+    }
+
+    .dark-result{
+        background: rgba(49, 77, 168, 0.5) !important;
+        border-radius: 6px;
+        box-shadow: 0 4px 30px #0003;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(0,0,0,.3);
+    }
+
+    .form-group .white-glassmorphism{ 
+        border-radius: 6px;
+    }
+
+    #swap{
+        color:#fff;
+    }
+
+    #swap:hover{
+        color:#0f2027 !important;
+    }
+
+    .special{
+      font-family: 'Libre Baskerville';
+      font-style: italic;
+      color: rgb(255, 183, 0);
+    }
+    .headers{
+        font-size: 2.1em;
+    }
+
+    #convertCurr{
+      background-color:#2952e3;
+    }
+
+    .flip-y {
+      transition-property:all;
+      transition-duration: 0.9s;
+
+    }
+
+    .flip-y:hover{
+      transform: rotateY(360deg);;
+    }
+
+    /* info-card */
+    .info-glassmorphism{
+      background: hsla(193, 89%, 50%, 0.05) !important;
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255,255,255,.3) !important;
+    }
+
+    /* side-content */
+    #side-content .white-glassmorphism{
+      border:0;
+      
+    }
+
+    /* footer */
+    footer .card{
+      border:0 !important;
+      background-color: #0f0e13;
+      background-image: radial-gradient(at 0% 100%,hsla(253,16%,7%,1) 0,transparent 53%),radial-gradient(at 50% 150%,hsla(339,49%,30%,1) 0,transparent 50%);
+    }
+
+    @media screen and (max-width: 992px) {
+      .main-menu{
+          padding-left:2em  !important;
+          left:0;
+      }
+
+      .nav-container{
+          height: fit-content;
+      }
+      .section-info{
+          text-align: center;
+          padding: 50px 0 !important;
+
+      }
+
+      #main-content{
+        margin-top:80px;
+      }
+
+
+      .white-glassmorphism{
+          border:0 !important;
+      }
+
+      .main-converter{
+          margin: 30px 3% !important;
+      }
+    }
+
+  </style>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        class News {
+          async getNews(page){
+              const newsRes = await fetch(`./news-data?page=${page}`);
+              const response = await newsRes.json();
+              return response;
+          }
+          async getMainNews(page){
+              console.log('Loader');
+              const loader = document.createElement('div');
+              loader.innerHTML=`
+                  <div class="text-center py-3">
+                      <img src = "assets/loader.gif" height="50px"width="50px" />
+                  </div>
+              `;
+              document.querySelector('#main-news-list').append(loader);
+              const newsRes = await fetch(`./news-data?page=${page}`);
+              const response = await newsRes.json();
+              console.log('Loader done');
+              document.querySelector('#main-news-list').removeChild(loader);
+              return response;
+          }
+          async getYTVideos(){
+            const loader = document.createElement('div');
+            loader.innerHTML=`
+                <div class="text-center py-3">
+                    <img src = "../../../assets/loader.gif" height="50px"width="50px" />
+                </div>
+            `;
+            document.querySelector('#YTSearch').append(loader);
+            const videosRes = await fetch(`../../../youtube?q=${fromCoin}%20to%20${toCoin}%7C&maxResults=3`);
+            const response = await videosRes.json();
+            document.querySelector('#YTSearch').removeChild(loader);
+            return response;
+          }
+        }
+  
+        class CoinMarket{
+            async getCoin(symbol){
+                const coinRes = await fetch(`../../../coin?symbol=${symbol}`);
+                const response = await coinRes.json();
+                return response.data;
+            }
+            async getCoins(limit){
+                const coinRes = await fetch(`../../../coins?limit=${limit}`);
+                const response = await coinRes.json();
+                return response.data;
+            }
+            async getFiats(limit){
+                const fiatRes = await fetch(`../../../fiats?limit=${limit}`);
+                const response = await fiatRes.json();
+                return response.data;
+            }
+            async getConvertion(from,to,amt){
+                const conversionRes = await fetch(`../../../conversion?symbol=${from}&convert=${to}&amount=${amt}`);
+                const response = await conversionRes.json();
+                return response.data;
+            }
+            async getListings(sort,limit,convert){
+                const listingRes = await fetch(`../../../listings?sort=${sort}&limit=${limit}`);
+                const response = await listingRes.json();
+                return response.data;
+            }
+            async getQuote(from,to){
+              const listingRes = await fetch(`../../../quoteLatest?symbol=${from}&convert=${to}`);
+              const response = await listingRes.json();
+              return response.data;
+            }
+        }
+  
+  
+  
+        let fromCoin = document.querySelector('.from').id.toUpperCase();
+        let toCoin = document.querySelector('.to').id.toUpperCase();
+        let amount = document.querySelector('.amount').id;
+        // API 
+        const APICtrl = (()=>{
+            const coinCap = new CoinMarket;
+            const news = new News;
+
+            return{
+                getCoins:(limit)=>{
+                    coinCap.getCoins(limit)
+                        .then(data => {
+                            UICtrl.showCoins(data);
+                        })
+                        .catch(err => console.log(err))
+
+
+                },
+                getFiats:(limit)=>{
+                    coinCap.getFiats(limit)
+                        .then(data => {
+                            UICtrl.showFiats(data);
+                        })
+                        .catch(err => console.log(err))
+                },
+                getDescription:(symbol)=>{
+                    coinCap.getCoins(5000)
+                    .then(coins => {
+                        for(let i =0;i<coins.length;i++){
+                        if(fromCoin.toUpperCase() === coins[i].symbol){
+                            coinCap.getCoin(symbol)
+                            .then(data=>{
+                                UICtrl.showDescription(fromCoin,data);
+                            })
+                            .catch(err=> console.log(err));
+                        }else if(toCoin.toUpperCase() === coins[i].symbol){
+                            coinCap.getCoin(toCoin)
+                            .then(data=>{
+                                UICtrl.showDescription(toCoin,data);
+                            })
+                            .catch(err=> console.log(err));
+                        }else{
+                            UICtrl.showToDescription();
+                        }
+                    }
+                    }).catch(err => console.log(err))
+                },
+                getConvertionRate:(from,to)=>{
+                    coinCap.getConvertion(from,to,1)
+                        .then(data => {    
+                          UICtrl.showConvertedRate(data);
+                        //    console.log(data);
+                        })
+                        .catch(() => alert('This Conversion is not possible. We are so sorry for the inconvenience.'))
+                },
+                getCoinQuote: (from,to)=>{
+                    coinCap.getCoins(5000)
+                  .then(coins => {
+                    for(let i =0;i<coins.length;i++){
+                      if(fromCoin.toUpperCase() === coins[i].symbol){
+                        coinCap.getQuote(from,toCoin)
+                        .then(data => UICtrl.showQuote(data))
+                        .catch(err => console.log(err))
+                      }
+                      else if(toCoin.toUpperCase() === coins[i].symbol){
+                        coinCap.getQuote(toCoin,from)
+                        .then(data => UICtrl.showQuote(data))
+                        .catch(err => console.log(err))
+                      }
+                    }
+                  })
+                  .catch(err => console.log(err))
+                },
+                getFinalConvertion: (from,to,amt)=>{
+                    coinCap.getConvertion(from,to,amt)
+                        .then(data => {    
+                          UICtrl.showConvertedCurrency(data);
+                          console.log(data);
+                        })
+                        .catch(()=>alert('This Conversion is not possible. We are so sorry for the inconvenience.'))
+                },
+                getYTVideos:(nextToken)=>{
+                    news.getYTVideos(nextToken)
+                    .then(data => UICtrl.ShowYT(data))
+                    .catch(err => console.log(err))
+                }
+                
+            }
+        })()
+  
+        // UI
+        const UICtrl =(()=>{
+            const UISelectors = {
+              menuToggler: '.navbar-toggler',
+              mainMenu:'.main-menu',  
+              convert:'#convertCurr',
+              convertionRate:'#convertionRate',
+              quantity:'#quantity',
+              result:'#result',
+              formSelect:'form-select',
+              fromSelect:'#fromSelect',
+              toSelect:'#toSelect',
+              infoContainer:'#info-converter',
+              swap:'#swap',
+              coinQuote:'#coinQuote',
+              YTNewsList:'#YTSearch',
+              converter:'#converter',
+              converterHead:'#converter-head'
+            }
+            function priceWithCommas(x) {
+                x = x.toString();
+                arr = x.split('.');
+                var pattern = /(-?\d+)(\d{3})/;
+                while (pattern.test(arr[0]))
+                    arr[0] = arr[0].replace(pattern, "$1,$2");
+                return arr[0]+'.'+arr[1];
+            }
+  
+            return{
+                getUISelectors:()=>{
+                    return UISelectors;
+                },
+                showCoins:(ranking)=>{
+                    const fromSelect = document.querySelector(UISelectors.fromSelect);
+                    const toSelect = document.querySelector(UISelectors.toSelect);
+                    let upperSelect='';
+                    for(let i =0;i<ranking.length;i++){
+                            upperSelect+=`
+                                <option id="${ranking[i].symbol}">${ranking[i].symbol} - ${ranking[i].name}</option>
+                            `;
+                    };
+                    let lowerSelect = '';
+                    for(let i =0;i<ranking.length;i++){
+                        lowerSelect+=`
+                            <option id="${ranking[i].symbol}">${ranking[i].symbol} - ${ranking[i].name}</option>
+                        `
+                    };
+                    fromSelect.innerHTML+=upperSelect;
+                    toSelect.innerHTML+=lowerSelect;
+
+                    try{
+                        for(let i =0;i<fromSelect.options.length;i++){
+                            if(fromSelect.options[i].id === fromCoin ){
+                                fromSelect.options[i].selected = true;
+                                break;
+                            }
+
+                        }
+                        for(let i =0;i<toSelect.options.length;i++){
+                            if(toSelect.options[i].id === toCoin ){
+                                toSelect.options[i].selected = true;
+                                break;
+                            }
+
+                        }
+                    }catch{
+                        window.reload();
+                    }
+
+                    // Get Rates
+                    let fromID = fromSelect.options[fromSelect.selectedIndex].id;
+                    let toID = toSelect.options[toSelect.selectedIndex].id;
+                    try {
+                        APICtrl.getConvertionRate(fromID,toID);
+                    } catch (error) {
+                        alert("This conversion is not possible, we are so sorry for this inconvenience")
+                    }
+
+                    
+                },
+                showFiats:(ranking)=>{
+                    const fromSelect=document.querySelector(UISelectors.fromSelect);
+                    const toSelect=document.querySelector(UISelectors.toSelect);
+                    let output='';
+                    for(let i =0;i<ranking.length;i++){
+                        output += `<option id="${ranking[i].symbol}">${ranking[i].symbol} - ${ranking[i].name}</option>`;
+                    };
+                    
+                    output+='<option disabled="disabled" class = "py-2">Crypto Coins</option>';
+
+                    fromSelect.innerHTML=output;
+                    toSelect.innerHTML=output;
+
+                },
+                showConvertedRate:(data)=>{
+                    const fromField = document.querySelector(UISelectors.fromSelect)
+                    const fromName= fromField.options[fromField.selectedIndex].textContent;
+                    const fromNameArr = fromName.split(' -');
+  
+                    const toField = document.querySelector(UISelectors.toSelect);
+                    const toName = toField.options[toField.selectedIndex].textContent;
+                    const toNameArr = toName.split(' -');
+  
+                    let toID = toSelect.options[toSelect.selectedIndex].id;
+  
+                    let output = `
+                        ${fromNameArr[0]}/${toNameArr[0]}: <span class="" style="font-weight:800">${priceWithCommas((data[0].quote[toID].price).toFixed(7))}</span>
+                    `;
+                    document.querySelector(UISelectors.convertionRate).innerHTML=output;
+                },
+                showConvertedCurrency:(data)=>{
+                    const fromField = document.querySelector(UISelectors.fromSelect)
+                    const fromName= fromField.options[fromField.selectedIndex].textContent;
+                    const fromNameArr = fromName.split(' -');
+  
+                    const toField = document.querySelector(UISelectors.toSelect);
+                    const toName = toField.options[toField.selectedIndex].textContent;
+                    const toNameArr = toName.split(' -');
+                    const toID = toSelect.options[toSelect.selectedIndex].id;
+                    let output = `
+                        <div class="card-body">
+                            <h4 class="card-title text-center">${data[0].amount} ${fromNameArr[0]} = ${priceWithCommas((data[0].quote[toID].price).toFixed(5))} ${toNameArr[0]}</h4>
+                        </div>
+                    `;
+                    // console.log(output);
+                    document.querySelector(UISelectors.result).innerHTML=output;
+                },
+                showTopConversions:()=>{
+                    const coinCap = new CoinMarket();
+                    getRates(fromCoin);
+                    function getRates(coin){
+                        document.querySelector('#topConversion').innerHTML=''; 
+                        let start = 0.025;
+                        for(let j=1;j<4;j++){
+                            let amt=1;
+                            amt = start*j;
+                            amt= amt.toFixed(5);
+                            coinCap.getConvertion(coin,toCoin,amt).then(data => createHTML(data[0].quote[toCoin].price,amt));
+                        }
+                        start = 0.5;
+                        for(let j=1;j<3;j++){
+                            let amt=1;
+                            amt = start*j;
+                            coinCap.getConvertion(coin,toCoin,amt).then(data => createHTML(data[0].quote[toCoin].price,amt));
+                        }
+                        start = 5;
+                        for(let j=1;j<5;j++){
+                            let amt=1;
+                            amt = start*j;
+                            coinCap.getConvertion(coin,toCoin,amt).then(data => createHTML(data[0].quote[toCoin].price,amt));
+                        }
+                        function createHTML(price,amt){
+                            let output='';
+                            output=`
+                                <a href="/converter/${fromCoin.toLowerCase()}/${toCoin.toLowerCase()}/${amt}" style="text-decoration:none;">
+                                    <li class="list-group-item list-group-item-action d-flex fs-5 justify-content-between align-items-center bg-transparent white-glassmorphism text-light">
+                                    ${amt} ${coin} to ${toCoin}
+                                    <em class="badge text-warning">${priceWithCommas(price.toFixed(3))}</em>
+                                    </li>
+                                </a>
+                            `;
+                            document.querySelector('#topConversion').innerHTML+=output;
+                        };
+                    }
+                },
+                showDescription:(from,data)=>{
+                    const coin = data[`${from}`]
+                    let output=`
+                    <div class="card-body">
+                        <h4 class="card-title fs-3" style="font-weight: 600;">
+                          <a href="${coin.urls.website}" style="text-decoration:none;">
+                            <img src="${coin.logo}"class="img px-3 flip-y"style="width:90px;"/>
+                          </a>
+                          ${fromCoin} to ${toCoin} Converter</h4>
+                        <p class="card-text">${coin.description}</p>
+                    </div>
+                    `;
+                    document.querySelector(UISelectors.infoContainer).innerHTML = output;
+                },
+              showToDescription:()=>{
+                document.querySelector(UISelectors.infoContainer).innerHTML = `
+                <div class="card-body">
+                    <h4 class="card-title fs-3" style="font-weight: 600;">
+                        ${amount} ${fromCoin} to ${toCoin} Converter
+                    </h4>
+                    <p>
+                      We are using various trusted sources to provide you the most accurate exchange rates possible. The currency exchange rates on the site are being updated hourly.
+                    </p>
+                    <p>
+                      Our main is to provide useful tools and resources. On our site you can not only calculate coin exchange rates but also find all kinds of useful information and news related to cryptocurrency exchange and investment, blockchain technology, etc.
+                    </p>
+                `;
+              },
+                showQuote:(data)=>{
+                    let info = data[fromCoin][0];
+                    let output = `
+                    <tbody class="rounded text-light">
+                        <tr>
+                        <th scope="col" class="border-bottom pb-0"colspan=2 style="padding-left:5%;"><h3>${fromCoin} to ${toCoin} Latest Info</h3></th>
+                        </tr>
+                        <tr>
+                        <th scope="col" style="padding-left:5%;">Last Updated</th>
+                        <td scope="col" style="padding-left:5%;">${(new Date(info.last_updated)).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})}</td>
+                        </tr>
+                        <tr>
+                        <th scope="col" style="padding-left:5%;">Price</th>
+                        <td scope="col" style="padding-left:5%;">${priceWithCommas((info.quote[`${toCoin}`].price).toFixed(5))} ${toCoin}</td>
+                        </tr>
+                        <tr>
+                        <th scope="col" style="padding-left:5%;">1hr Percent Change </th>
+                        <td scope="col" style="padding-left:5%;">${(info.quote[`${toCoin}`].percent_change_1h).toFixed(5)}%</td>
+                        </tr>
+                        <tr>
+                        <th scope="col" style="padding-left:5%;">24hr Percent Change </th>
+                        <td scope="col" style="padding-left:5%;">${(info.quote[`${toCoin}`].percent_change_24h.toFixed(5))}%</td>
+                        </tr>
+                        <tr>
+                        <th scope="col" style="padding-left:5%;">7day Percent Change </th>
+                        <td scope="col" style="padding-left:5%;">${(info.quote[`${toCoin}`].percent_change_7d).toFixed(5)}%</td>
+                        </tr>
+                    </tbody>
+                    `;
+
+                    document.querySelector(UISelectors.coinQuote).innerHTML = output;
+
+                },
+                ShowYT:(data)=>{
+                    let videos = data.items;
+                    let output='';
+
+                    videos.forEach(video => {
+                        output+=`
+                            <div class="col-12 mx-auto col-sm-4 flex-column px-0 px-sm-2 py-2 py-sm-0 ">
+                                <iframe class="rounded"width="100%" height="auto" src="https://www.youtube.com/embed/${video.id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <h5 class="my-3 px-2 text-light">${video.snippet.title}</h5>
+                            </div>
+                        `
+                    });
+
+                    document.querySelector(UISelectors.YTNewsList).innerHTML+=output;
+                }
+            }
+        })()
+  
+        // APP
+        const APPCtrl = ((APICtrl,UICtrl)=>{
+            const UISelectors = UICtrl.getUISelectors();
+            document.querySelector(UISelectors.convert).addEventListener('click', newPage);
+            document.querySelector(UISelectors.fromSelect).addEventListener('change',getRates);
+            document.querySelector(UISelectors.toSelect).addEventListener('change',getRates);
+            document.querySelector(UISelectors.swap).addEventListener('click', swapOptions);
+            document.querySelector(UISelectors.menuToggler).addEventListener('click', menuFixed);
+            
+            document.addEventListener('DOMContentLoaded',()=>{
+                coinRankings();
+                UICtrl.showTopConversions();
+                APICtrl.getYTVideos();
+                APICtrl.getCoinQuote(fromCoin,toCoin);
+                // Get Result
+                let amt = document.querySelector(UISelectors.quantity).value;
+                if(amount ===`` || amount<= 0){
+                    alert('Enter +ve Amount of currency to be converted');
+                }else{
+                    APICtrl.getFinalConvertion(fromCoin,toCoin,amount);                                             
+                    // console.log(from, toID, amount);
+                }
+            })
+
+          // Nav menu events
+          let menu = document.querySelector(UISelectors.mainMenu);
+          let flag=0;
+
+          document.addEventListener('scroll',()=>{
+              if(window.scrollY === 0){
+                  menu.style.background = 'transparent';
+              }else{
+                  menu.style.background = '#0f0e13';
+              };
+          })
+
+          function menuFixed(){
+              flag++;
+              if(flag%2==0 && window.scrollY==0){
+                  menu.style.background='transparent';
+              }else{
+                  menu.style.background="black";
+
+              }
+          }         
+
+  
+            // Event Functions
+            function getRates(e){
+                const fromSelect = document.querySelector(UISelectors.fromSelect);
+                let fromID = fromSelect.options[fromSelect.selectedIndex].id;
+                const toSelect = document.querySelector(UISelectors.toSelect);
+                let toID = toSelect.options[toSelect.selectedIndex].id;
+                APICtrl.getConvertionRate(fromID,toID);
+            }
+  
+            function coinRankings(){
+                APICtrl.getFiats(50);
+                APICtrl.getCoins(50);
+
+                APICtrl.getDescription(fromCoin);
+
+            }
+
+            function newPage(e){
+                const fromSelect = document.querySelector(UISelectors.fromSelect);
+                let fromID = fromSelect.options[fromSelect.selectedIndex].id;
+                const toSelect = document.querySelector(UISelectors.toSelect);
+                let toID = toSelect.options[toSelect.selectedIndex].id;
+                let amount = document.querySelector(UISelectors.quantity).value;
+                if(amount ===``){
+                    alert('Enter +ve Amount of currency to be converted');
+                }else{
+                    location.replace(`/converter/${fromID.toLowerCase()}/${toID.toLowerCase()}/${amount}`);                                          
+                }
+                e.preventDefault();
+            }
+  
+            function convertionDetails(){
+                // Getting IDs and value
+                const fromSelect = document.querySelector(UISelectors.fromSelect);
+                let fromID = fromSelect.options[fromSelect.selectedIndex].id;
+                const toSelect = document.querySelector(UISelectors.toSelect);
+                let toID = toSelect.options[toSelect.selectedIndex].id;
+                let amt = document.querySelector(UISelectors.quantity).value;
+                if(amt ===``){
+                    alert('Enter Amount of currency to be converted');
+                }else{
+                    APICtrl.getFinalConvertion(fromID,toID,amt);                                             
+                    console.log(fromID, toID, amt);
+                }
+            }
+
+            function swapOptions(e){;
+                const fromSelect = document.querySelector(UISelectors.fromSelect);
+                const from = fromSelect.options[fromSelect.selectedIndex].textContent;
+                const toSelect = document.querySelector(UISelectors.toSelect);
+                const to = toSelect.options[toSelect.selectedIndex].textContent;
+
+                for(let i =0;i<fromSelect.options.length;i++){
+                    if(fromSelect.options[i].textContent === to){
+                        fromSelect.options[i].selected = true;
+                    }
+                }
+
+                for(let i =0;i<toSelect.options.length;i++){
+                    if(toSelect.options[i].textContent === from){
+                        toSelect.options[i].selected = true;
+                    }
+                }
+
+                getRates();
+
+                e.preventDefault();
+            }
+        })(APICtrl,UICtrl)
+      </script>
+
+   </body>
+</html>
