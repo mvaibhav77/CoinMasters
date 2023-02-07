@@ -11,7 +11,7 @@ let cache = apiCache.middleware;
 const API_COIN_MARKET_KEY = process.env.API_COIN_MARKET_KEY;
 
 
-router.get('/',cache('60 minutes'), async (req,res)=>{
+router.get('/',cache('80 minutes'), async (req,res)=>{
     try{
         const params = new URLSearchParams(
             {

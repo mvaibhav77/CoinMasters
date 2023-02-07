@@ -116,7 +116,7 @@
                         </select>
                     </div>
                     <div class="col-12 col-md-1 text-center p-0 justify-content-between ">
-                        <button type="button" class="btn btn-default fs-5" id="swap">
+                        <button type="button" class="btn btn-default` fs-5" id="swap">
                           <i class="fa fa-arrow-right-arrow-left"></i>
                         </button>
                     </div>
@@ -300,12 +300,13 @@
   }
 
   #swap{
-      color:#fff;
-  }
+        color:#fff;
+    }
 
-  #swap:hover{
-      color:#0f2027 !important;
-  }
+    #swap:hover{
+        color:#1c64b7 !important;
+    }
+
 
   .special{
     font-family: 'Libre Baskerville';
@@ -368,7 +369,7 @@
     }
 
     #main-content{
-      margin-top:80px;
+      margin-top:100px;
     }
 
 
@@ -802,19 +803,6 @@
                 UICtrl.showTopConversions();
                 APICtrl.getYTVideos();
                 APICtrl.getCoinQuote(fromCoin,toCoin);
-
-                if(window.innerWidth < 600){
-                  console.log(' Mobile View ');
-
-                  document.querySelector(UISelectors.converter).classList.remove('bg-info');
-                  document.querySelector(UISelectors.converter).classList.add('bg-dark');
-                  
-                  document.querySelector(UISelectors.converterHead).classList.remove('text-dark');
-                  document.querySelector(UISelectors.converterHead).classList.add('text-light');
-
-                  document.querySelector(UISelectors.swap).classList.remove('btn-info');
-                  document.querySelector(UISelectors.swap).classList.add('btn-dark');
-              }
             })
 
             // Nav menu events

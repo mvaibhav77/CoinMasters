@@ -10,7 +10,7 @@ let cache = apiCache.middleware;
 // API KEY AND DOMAIN
 const API_YOUTUBE_KEY = process.env.API_YOUTUBE_KEY;
 
-router.get('/',cache('40 minutes'), async (req,res)=>{
+router.get('/',cache('60 minutes'), async (req,res)=>{
     try{
         const params = new URLSearchParams(
             {

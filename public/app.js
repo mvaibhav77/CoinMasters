@@ -342,7 +342,7 @@ const APPCtrl = (function(UICtrl,APICtrl){
         APICtrl.getGainersList("percent_change_24h",3);
         APICtrl.getNewbieList("percent_change_24h",3);
         coinRankings(e);
-        UICtrl.showTopConversions();
+        // UICtrl.showTopConversions();
 
     });
 

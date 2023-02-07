@@ -92,8 +92,9 @@ nav{
 }
 
 #swap:hover{
-    color:#0f2027 !important;
+    color:#1c64b7 !important;
 }
+
 
 .main-converter{
     margin: 0% 8% 3% 8% !important;
@@ -334,7 +335,7 @@ footer .card{
     }
     .main-converter{
         margin: 0 3% !important;
-        padding-top: 80px;
+        padding-top: 110px;
     }
 
     .side-converter-head{
