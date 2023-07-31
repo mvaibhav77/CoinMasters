@@ -1,7 +1,5 @@
 # CoinMasters
 
-![CoinMasters Logo](https://coinmasters.in/static/images/logo.png)
-
 Welcome to the CoinMasters GitHub repository! This repository houses the source code for the website [coinmasters.in](https://coinmasters.in), which is a Cryptocurrency-based website. CoinMasters is a platform designed to provide users with comprehensive information and resources related to cryptocurrencies, helping them make informed decisions in the ever-evolving world of digital assets.
 
 ## Table of Contents
